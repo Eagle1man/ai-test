@@ -1,0 +1,9 @@
+{
+  "name": "Тест по ИИ-лабораторным",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Итоговый тест по лабораторным работам курса. Статический сайт для GitHub Pages.",
+  "scripts": {
+    "serve": "python -m http.server 8000"
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Итоговый тест по лабораторным работам</title>
+<meta name="description" content="Проверочный тест по лабораторным работам курса по искусственному интеллекту">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="kicker">Курс «Информатика» · раздел ИИ</div>
+    <h1>Итоговый тест по лабораторным работам</h1>
+    <p class="sub">Лёгкий уровень · <span id="qcount">27</span> вопросов ·
+      ориентировочно 15 минут · без штрафов за неверный ответ</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- Шаг 1: регистрация -->
+  <section id="startScreen" class="card">
+    <h2>Как это работает</h2>
+    <ul class="plain">
+      <li>Введите <b>фамилию, имя и группу</b> — они попадут в отчёт.</li>
+      <li>Ответьте на вопросы. Прогресс сохраняется: можно закрыть
+        вкладку и вернуться позже.</li>
+      <li>В конце нажмите <b>«Отправить ответы»</b> — отчёт придёт
+        преподавателю на почту.</li>
+    </ul>
+
+    <h3>Кто сдаёт</h3>
+    <div class="grid">
+      <label class="field">
+        <span>Фамилия и имя <b class="req">*</b></span>
+        <input id="fio" type="text" placeholder="Иванов Иван"
+               autocomplete="name">
+      </label>
+      <label class="field">
+        <span>Группа</span>
+        <input id="grp" type="text" placeholder="ИС-21">
+      </label>
+      <label class="field">
+        <span>Email (чтобы ответ пришёл и вам)</span>
+        <input id="email" type="email" placeholder="ivanov@mail.ru"
+               autocomplete="email">
+      </label>
+    </div>
+    <p id="nameErr" class="err" hidden>Введите фамилию и имя.</p>
+
+    <button id="startBtn" class="btn big">Начать тест</button>
+    <p class="note">Если вопросы уже открывались с этого устройства,
+      ответы подставятся автоматически.</p>
+  </section>
+
+  <!-- Шаг 2: сам тест -->
+  <section id="testScreen" hidden>
+    <div class="card sticky">
+      <div class="progline">
+        <span id="progText">Вопрос 1</span>
+        <span class="spacer"></span>
+        <span class="hintline">Подсказка по кнопке под вопросом</span>
+      </div>
+      <div class="bar"><div id="progressBar"></div></div>
+    </div>
+
+    <div class="card">
+      <div id="question"></div>
+      <div class="nav">
+        <button id="prevBtn" class="btn ghost">← Назад</button>
+        <button id="nextBtn" class="btn">Далее →</button>
+      </div>
+    </div>
+
+    <div class="card finish">
+      <h3>Готово?</h3>
+      <p>Нажмите «Отправить ответы» — отчёт уйдёт преподавателю,
+        и вы увидите свой результат.</p>
+      <button id="sendBtn" class="btn big">Отправить ответы</button>
+      <button id="restartBtn" class="btn ghost">Начать заново</button>
+    </div>
+  </section>
+
+  <!-- Результат -->
+  <section id="result" class="card hidden"></section>
+
+  <footer>
+    <p>Вопросы соответствуют лабораторным работам 1–5.</p>
+    <p>Нужна помощь? Напишите преподавателю на
+      <a href="mailto:diorlov198611@yandex.ru">diorlov198611@yandex.ru</a>.</p>
+  </footer>
+</main>
+
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
